@@ -3,3 +3,19 @@ spring:
     name: mail-service
   profiles:
     active: dev
+
+  mail:
+    host: smtp.gmail.com
+    username: jeventstesting@gmail.com
+    password: bgxsmmxotxqrvqnl
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+
+
+pdfDir: /Users/robby/Desktop/Stage/Stage Opdracht/Project/ticketing-system/back-end/ticket-service/pdf/

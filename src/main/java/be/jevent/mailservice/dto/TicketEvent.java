@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class TicketDTO {
+public class TicketEvent {
 
     private final Long id;
     private final Long eventId;
@@ -22,9 +22,9 @@ public class TicketDTO {
     private final double price;
     private final String buildingName;
 
-    public TicketDTO(Long id, Long eventId, String ticketUserName, String firstName,
-                     String name, String email, String eventName, String eventType,
-                     LocalDate eventDate, LocalTime eventTime, double price, String buildingName) {
+    public TicketEvent(Long id, Long eventId, String ticketUserName, String firstName,
+                       String name, String email, String eventName, String eventType,
+                       LocalDate eventDate, LocalTime eventTime, double price, String buildingName) {
         this.id = id;
         this.eventId = eventId;
         this.ticketUserName = ticketUserName;
