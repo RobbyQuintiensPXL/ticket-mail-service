@@ -32,25 +32,6 @@ public class KafkaConsumerConfig {
         config.put(JsonDeserializer.TRUSTED_PACKAGES, "be.jevents.ticketservice.events");
 
         return new DefaultKafkaConsumerFactory<>(config);
-
-/*        Map<String, Object> props = new HashMap<>();
-        props.put(
-                ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                "localhost:9092");
-        props.put(
-                ConsumerConfig.GROUP_ID_CONFIG,
-                "ticket");
-        props.put(
-                ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,
-                StringSerializer.class);
-*//*        props.put(JsonDeserializer.TYPE_MAPPINGS, "ticket:be.jevents.mailservice.dto.TicketEVent");*//*
-        props.put(
-                ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
-                JsonDeserializer.class);
-*//*        props.put(JsonDeserializer.TRUSTED_PACKAGES,
-                "be.jevent.mailservice.*");*/
-
-        /*return new DefaultKafkaConsumerFactory<>(props);*/
     }
 
     @Bean
