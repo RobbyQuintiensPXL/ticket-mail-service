@@ -2,7 +2,6 @@ package be.jevent.mailservice.config;
 
 import be.jevent.mailservice.dto.TicketEvent;
 import be.jevent.mailservice.service.MailService;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
