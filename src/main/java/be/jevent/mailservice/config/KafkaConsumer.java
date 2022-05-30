@@ -6,6 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.messaging.MessageHeaders;
+import org.springframework.messaging.handler.annotation.Headers;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -27,10 +30,10 @@ public class KafkaConsumer {
     }*/
 
     @KafkaListener(topics = "ticket", groupId = "ticket")
-    public void receive(TicketEvent ticketEvent) {
+    public void receive(@Payload TicketEvent ticketEvent, @Headers MessageHeaders headers) {
         LOGGER.info("received payload='{}'", ticketEvent.toString());
         setPayload(ticketEvent);
-        mailService.sendEmail("robbyquintiens.rq@gmail.com");
+        mailService.sendEmail(ticketEvent);
     }
 
     public TicketEvent getPayload() {

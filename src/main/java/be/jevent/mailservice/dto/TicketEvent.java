@@ -1,89 +1,134 @@
 package be.jevent.mailservice.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class TicketEvent {
 
-    private final Long id;
-    private final Long eventId;
-    private final String ticketUserName;
-    private final String firstName;
-    private final String name;
-    private final String email;
-    private final String eventName;
-    private final String eventType;
-    @JsonFormat(pattern = "dd-MM-yyyy")
-    private final LocalDate eventDate;
-    @JsonFormat(pattern = "HH:mm:ss")
-    private final LocalTime eventTime;
-    private final double price;
-    private final String buildingName;
-
-    public TicketEvent(Long id, Long eventId, String ticketUserName, String firstName,
-                       String name, String email, String eventName, String eventType,
-                       LocalDate eventDate, LocalTime eventTime, double price, String buildingName) {
-        this.id = id;
-        this.eventId = eventId;
-        this.ticketUserName = ticketUserName;
-        this.firstName = firstName;
-        this.name = name;
-        this.email = email;
-        this.eventName = eventName;
-        this.eventType = eventType;
-        this.eventDate = eventDate;
-        this.eventTime = eventTime;
-        this.price = price;
-        this.buildingName = buildingName;
-    }
+    private Long id;
+    private Long eventId;
+    private String ticketUserName;
+    private String firstName;
+    private String name;
+    private String email;
+    private String eventName;
+    private String eventType;
+    private LocalDate eventDate;
+    private LocalTime eventTime;
+    private double price;
+    private String buildingName;
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getEventId() {
         return eventId;
     }
 
+    public void setEventId(Long eventId) {
+        this.eventId = eventId;
+    }
+
     public String getTicketUserName() {
         return ticketUserName;
+    }
+
+    public void setTicketUserName(String ticketUserName) {
+        this.ticketUserName = ticketUserName;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getEventName() {
         return eventName;
+    }
+
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
     public String getEventType() {
         return eventType;
     }
 
+    public void setEventType(String eventType) {
+        this.eventType = eventType;
+    }
+
     public LocalDate getEventDate() {
         return eventDate;
+    }
+
+    public void setEventDate(LocalDate eventDate) {
+        this.eventDate = eventDate;
     }
 
     public LocalTime getEventTime() {
         return eventTime;
     }
 
+    public void setEventTime(LocalTime eventTime) {
+        this.eventTime = eventTime;
+    }
+
     public double getPrice() {
         return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public String getBuildingName() {
         return buildingName;
+    }
+
+    public void setBuildingName(String buildingName) {
+        this.buildingName = buildingName;
+    }
+
+    @Override
+    public String toString() {
+        return "TicketEvent{" +
+                "id=" + id +
+                ", eventId=" + eventId +
+                ", ticketUserName='" + ticketUserName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", eventName='" + eventName + '\'' +
+                ", eventType='" + eventType + '\'' +
+                ", eventDate=" + eventDate +
+                ", eventTime=" + eventTime +
+                ", price=" + price +
+                ", buildingName='" + buildingName + '\'' +
+                '}';
     }
 }
