@@ -18,4 +18,4 @@ spring:
             fallback: false
 
 
-pdfDir: /Users/robby/Desktop/Stage/Stage Opdracht/Project/ticketing-system/back-end/ticket-service/pdf/
+pdfDir: /pdf
