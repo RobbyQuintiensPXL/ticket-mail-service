@@ -30,7 +30,7 @@ public class KafkaConsumer {
     private TicketEvent payload = null;
 
     @KafkaListener(topics = "ticket", groupId = "ticket")
-    public void receive(@Payload TicketEvent ticketEvent, @Headers MessageHeaders headers) throws MessagingException, IOException {
+    public void receive(@Payload TicketEvent ticketEvent) throws MessagingException, IOException {
         LOGGER.info("received payload='{}'", ticketEvent.toString());
         setPayload(ticketEvent);
         mailService.sendEmail(ticketEvent);
