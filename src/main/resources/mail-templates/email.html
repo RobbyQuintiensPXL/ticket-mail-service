@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">JEvents Ticket Mail</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="email.css">
+</head>
+<body>
+<p>Hi, <span th:text="${name}"></span></p>
+
+<p>
+    Attached you can find your tickets for:<br/>
+</p>
+<h4 th:text="${eventName}"></h4>
+<h4 th:text="${building}"></h4>
+<h4 th:text="${date}"></h4>
+<p>
+    Have fun!
+</p>
+<p>
+    Best regards, <br/>
+    <em>The JEvents Team</em>
+</p>
+<div class="footer">
+    <p>
+        <a href="http://localhost:4200"> <img src="cid:logo.jpeg" alt="image-logo"/> </a>
+    </p>
+</div>
+</body>
+</html>

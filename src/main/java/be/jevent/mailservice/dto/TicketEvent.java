@@ -5,7 +5,8 @@ import java.time.LocalTime;
 
 public class TicketEvent {
 
-    private Long id;
+    private int ticketId;
+    private Long ticketUserId;
     private Long eventId;
     private String ticketUserName;
     private String firstName;
@@ -17,13 +18,22 @@ public class TicketEvent {
     private LocalTime eventTime;
     private double price;
     private String buildingName;
+    private int amount;
 
-    public Long getId() {
-        return id;
+    public int getTicketId() {
+        return ticketId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
+    }
+
+    public Long getTicketUserId() {
+        return ticketUserId;
+    }
+
+    public void setTicketUserId(Long ticketUserId) {
+        this.ticketUserId = ticketUserId;
     }
 
     public Long getEventId() {
@@ -114,10 +124,18 @@ public class TicketEvent {
         this.buildingName = buildingName;
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
     @Override
     public String toString() {
         return "TicketEvent{" +
-                "id=" + id +
+                "ticketId=" + ticketId +
                 ", eventId=" + eventId +
                 ", ticketUserName='" + ticketUserName + '\'' +
                 ", firstName='" + firstName + '\'' +
@@ -129,6 +147,7 @@ public class TicketEvent {
                 ", eventTime=" + eventTime +
                 ", price=" + price +
                 ", buildingName='" + buildingName + '\'' +
+                ", amount=" + amount +
                 '}';
     }
 }

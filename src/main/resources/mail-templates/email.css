@@ -1,0 +1,11 @@
+.footer{
+    background: #EF991B;
+    height: 150px;
+    text-align: center;
+}
+
+.footer img {
+    height: 75px;
+    width: 75px;
+    margin-top: 25px;
+}
